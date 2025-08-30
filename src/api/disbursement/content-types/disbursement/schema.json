@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "disbursements",
+  "info": {
+    "singularName": "disbursement",
+    "pluralName": "disbursements",
+    "displayName": "Disbursement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "description": {
+      "type": "text"
+    },
+    "proof": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "disbursements"
+    }
+  }
+}

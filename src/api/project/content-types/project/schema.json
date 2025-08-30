@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.media"
+      ]
+    },
+    "fundraising_target_usd": {
+      "type": "decimal"
+    },
+    "project_updates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-update.project-update",
+      "mappedBy": "project"
+    },
+    "disbursements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::disbursement.disbursement",
+      "mappedBy": "project"
+    }
+  }
+}
