@@ -35,6 +35,9 @@
       "relation": "oneToMany",
       "target": "api::disbursement.disbursement",
       "mappedBy": "project"
+    },
+    "is_highlight": {
+      "type": "boolean"
     }
   }
 }

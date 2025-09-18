@@ -624,6 +624,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::disbursement.disbursement'
     >;
     fundraising_target_usd: Schema.Attribute.Decimal;
+    is_highlight: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
